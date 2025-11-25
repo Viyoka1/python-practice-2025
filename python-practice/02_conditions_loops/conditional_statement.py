@@ -82,6 +82,63 @@ if username == "admin" and password == "password123":
 else: 
     print("Invalid username or password.") 
 # %%
+# program to convert a Fahrenheit temperature to Celsius temperature
+inp = input("Enter tempperature in Fahrenheit: ")
+fahrenheit = float(inp)
+cel = (fahrenheit - 32) * 5.0/9.0
+print(f"Temperature in Celsius is: {cel} C")
+
+# %%
+# Try and Except feature in Python act as an "insurance policy" on a sequence of statements
+# temperature conversion with error handling 
+
+inp = input("Enter temperature in Fahrenheit: ")
+try: 
+    fahrenheit = float(inp) 
+    celcius = (fahrenheit - 32) * 5.0/9.0
+    print(f"Temperature in Celsius is: {celcius:} C")
+except: 
+    print("Please enter a number")
+
+# %%
+# Conditional statement exercise
+# Rewrite your pay computation to give the employee 1.5 times the hourly rate for hours worked above 40 hours.
+employee_hours = input("Enter hours worked: ")
+hours_worked = float(employee_hours)
+employee_rate = 10.00 
+if hours_worked > 40:
+    overtime_hours = hours_worked - 40
+    overtime_pay = overtime_hours * (employee_rate * 1.5)
+    total_pay = (40 * employee_rate) + overtime_pay 
+else: 
+    total_pay = hours_worked * employee_rate
+
+print(f"Your total pay for this cycle is: {total_pay}")
+# %%
+# Write a program to prompt for a score between 0.0 and 1.0.
+# If the score is out of range, print an error message.
+score_input = input("Enter score between 0.0 to 1.0: ")
+try: 
+    score = float(score_input) 
+    if score < 0.0 or score > 1.0: 
+        print("Error: Score out of range")
+    elif score >= 0.9:
+        print("A")
+    elif score >= 0.8:
+        print("B")
+    elif score >= 0.7:
+        print("C")
+    elif score >= 0.6:
+        print("D")
+    else: 
+        print("F")
+except:
+    print("Please enter a valid number")
+# %%
+
+# %%
+
+# %%
 
 # %%
 
